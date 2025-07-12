@@ -1,8 +1,9 @@
 "use client";
 
 import { useEffect } from "react";
-import { SiPython, SiGit } from "react-icons/si";
+import { SiPython, SiUnity, SiGit, SiPycharm, SiIntellijidea } from "react-icons/si";
 import { DiJava } from "react-icons/di";
+import { VscVscode } from "react-icons/vsc";
 
 export default function Home() {
     useEffect(() => {
@@ -25,7 +26,7 @@ export default function Home() {
                         <div className="max-w-4xl mx-auto px-4">
                             <h1 className="text-5xl font-bold mb-8 text-center text-white">O mně</h1>
                             <p className="max-w-xl text-lg text-gray-300">
-                                Ahoj, jmenuji se Jakub Váňa...
+                                Ahoj, jmenuji se Jakub Váňa a jsem vývojář se zaměřením na Python a Java. Mám zkušenosti s vývojem webových aplikací a her, a rád se učím nové technologie.
                             </p>
                         </div>
                     </section>
@@ -34,6 +35,9 @@ export default function Home() {
                     <section id="skills" className="min-h-screen scroll-mt-10 bg-gray-900 py-10 px-4">
                         <div className="max-w-4xl mx-auto px-4">
                             <h1 className="text-5xl font-bold mb-8 text-center text-white">Dovednosti</h1>
+                            <p className="max-w-xl text-lg text-gray-300 mx-auto mb-12 text-center">
+                                Věnuji se vývoji skriptů a aplikací v Pythonu a Javě, a mám zkušenosti s herním vývojem v Unity pomocí C#. Mám také zkušenosti s verzovacím systémem Git a používám různé IDE jako Visual Studio Code, PyCharm a IntelliJ IDEA pro efektivní vývoj.
+                            </p>
                             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                                 {[
                                     {
@@ -49,10 +53,34 @@ export default function Home() {
                                         link: "https://www.java.com",
                                     },
                                     {
+                                        name: "Unity (C#)",
+                                        description: "Tvorba 2D/3D her, fyzika, UI, skriptování v C#.",
+                                        icon: <SiUnity className="w-10 h-10 text-gray-700" />,
+                                        link: "https://unity.com",
+                                    },
+                                    {
                                         name: "Git",
                                         description: "Běžné používání na všech projektech.",
                                         icon: <SiGit className="w-10 h-10 text-orange-400" />,
                                         link: "https://git-scm.com",
+                                    },
+                                    {
+                                        name: "Visual Studio Code",
+                                        description: "Každodenní používání - vývoj webu, rozšíření, debugování.",
+                                        icon: <VscVscode className="w-10 h-10 text-blue-500" />,
+                                        link: "https://code.visualstudio.com",
+                                    },
+                                    {
+                                        name: "PyCharm",
+                                        description: "Efektivní práce s Pythonem - skriptování, debug, testování.",
+                                        icon: <SiPycharm className="w-10 h-10 text-green-400" />,
+                                        link: "https://www.jetbrains.com/pycharm/",
+                                    },
+                                    {
+                                        name: "IntelliJ IDEA",
+                                        description: "Vývoj v Javě - skvělé pro větší projekty.",
+                                        icon: <SiIntellijidea className="w-10 h-10 text-purple-600" />,
+                                        link: "https://www.jetbrains.com/idea/",
                                     }
                                 ].map((skill, i) => (
                                     <a
@@ -100,7 +128,7 @@ export default function Home() {
                                         href={project.link}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="block p-6 bg-gray-800 shadow-md rounded-xl hover:shadow-lg hover:bg-gray-700 transition"
+                                        className="block p-6 bg-gray-800 rounded-xl shadow-md hover:shadow-lg hover:bg-gray-700 transition"
                                     >
                                         <h3 className="text-xl font-semibold mb-2 text-white">{project.title}</h3>
                                         <p className="text-gray-400">{project.description}</p>
@@ -114,7 +142,7 @@ export default function Home() {
                     <section id="other" className="min-h-screen scroll-mt-10 bg-gray-900 py-10 px-4">
                         <div className="max-w-4xl mx-auto px-4">
                             <h1 className="text-5xl font-bold mb-8 text-center text-white">Ostatní</h1>
-                            <p className="text-lg text-gray-300">
+                            <p className="max-w-xl text-lg text-gray-300">
                                 Kredit, úspěchy, ...
                             </p>
                         </div>
