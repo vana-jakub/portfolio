@@ -105,23 +105,41 @@ export default function Home() {
                     <section id="projects" className="min-h-screen scroll-mt-10 bg-gray-950 py-10 px-4">
                         <div className="max-w-4xl mx-auto px-4">
                             <h1 className="text-5xl font-bold mb-8 text-center text-white">Projekty</h1>
+                            <p className="max-w-xl text-lg text-gray-300 mx-auto mb-12 text-center">
+                                Zde jsou některé z mých projektů, které jsem vytvořil, u každého projektu je krátký popis a odkaz na jeho stránku - (při prokliknutí na box s projektem).
+                            </p>
                             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                                 {[
                                     {
                                         title: "Portfolio Website",
-                                        description: "My personal portfolio showcasing projects and skills.",
+                                        description: "Moje osobní portfolio představující projekty a dovednosti.",
                                         link: "https://google.com",
                                     },
                                     {
-                                        title: "Project 2",
-                                        description: "Description, etc.",
+                                        title: "Download Manager",
+                                        description: "Nástroj pro efektivní správu a organizaci stahování.",
                                         link: "https://google.com",
                                     },
                                     {
-                                        title: "Project 3",
-                                        description: "Description, etc.",
+                                        title: "FileShare",
+                                        description: "Platforma pro sdílení souborů bezpečně a efektivně pomocí P2P.",
                                         link: "https://google.com",
                                     },
+                                    {
+                                        title: "NetStats",
+                                        description: "Platforma pro monitorování a analýzu síťového provozu.",
+                                        link: "https://google.com",
+                                    },
+                                    {
+                                        title: "Shifter",
+                                        description: "Primitivní simulátor CLI příkazového řádku s výstižnými příkazy a funkcemi.",
+                                        link: "https://google.com",
+                                    },
+                                    {
+                                        title: "Small scripts and tools...",
+                                        description: "Různé menší skripty a nástroje pro různé úkoly.",
+                                        link: "https://google.com",
+                                    }
                                 ].map((project, i) => (
                                     <a
                                         key={i}
