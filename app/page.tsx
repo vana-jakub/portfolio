@@ -1,11 +1,20 @@
 "use client";
 
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { SiPython, SiUnity, SiGit, SiPycharm, SiIntellijidea } from "react-icons/si";
 import { DiJava } from "react-icons/di";
 import { VscVscode } from "react-icons/vsc";
 
 export default function Home() {
+    const [openProject, setOpenProject] = useState<{ title: string; description: string } | null>(null);
+    useEffect(() => {
+        if (openProject) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "";
+        }
+    }, [openProject]);
+
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
@@ -106,51 +115,43 @@ export default function Home() {
                         <div className="max-w-4xl mx-auto px-4">
                             <h1 className="text-5xl font-bold mb-8 text-center text-white">Projekty</h1>
                             <p className="max-w-xl text-lg text-gray-300 mx-auto mb-12 text-center">
-                                Zde jsou některé z mých projektů, které jsem vytvořil, u každého projektu je krátký popis a odkaz na jeho stránku - (při prokliknutí na box s projektem).
+                                Zde jsou některé z mých projektů, které jsem vytvořil, klikněte na box s projektem pro delší popis a dokumentaci projektu.
                             </p>
                             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                                 {[
                                     {
                                         title: "Portfolio Website",
                                         description: "Moje osobní portfolio představující projekty a dovednosti.",
-                                        link: "https://google.com",
                                     },
                                     {
                                         title: "Download Manager",
                                         description: "Nástroj pro efektivní správu a organizaci stahování.",
-                                        link: "https://google.com",
                                     },
                                     {
                                         title: "FileShare",
                                         description: "Platforma pro sdílení souborů bezpečně a efektivně pomocí P2P.",
-                                        link: "https://google.com",
                                     },
                                     {
                                         title: "NetStats",
                                         description: "Platforma pro monitorování a analýzu síťového provozu.",
-                                        link: "https://google.com",
                                     },
                                     {
                                         title: "Shifter",
                                         description: "Primitivní simulátor CLI příkazového řádku s výstižnými příkazy a funkcemi.",
-                                        link: "https://google.com",
                                     },
                                     {
                                         title: "Small scripts and tools...",
                                         description: "Různé menší skripty a nástroje pro různé úkoly.",
-                                        link: "https://google.com",
                                     }
                                 ].map((project, i) => (
-                                    <a
+                                    <button
                                         key={i}
-                                        href={project.link}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
+                                        onClick={() => setOpenProject(project)}
                                         className="block p-6 bg-gray-800 rounded-xl shadow-md hover:shadow-lg hover:bg-gray-700 transition"
                                     >
                                         <h3 className="text-xl font-semibold mb-2 text-white">{project.title}</h3>
                                         <p className="text-gray-400">{project.description}</p>
-                                    </a>
+                                    </button>
                                 ))}
                             </div>
                         </div>
@@ -166,6 +167,32 @@ export default function Home() {
                         </div>
                     </section>
             </main>
+
+            {/* Modal */}
+            {openProject && (
+                <div
+                    className="fixed inset-0 bg-black/70 flex items-center justify-center z-50"
+                    onClick={() => setOpenProject(null)}
+                >
+                    <div
+                        className="bg-gray-900 text-white rounded-xl shadow-xl p-8 max-w-lg w-full relative"
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        <button
+                            onClick={() => setOpenProject(null)}
+                            className="absolute top-4 right-4 text-gray-300 hover:text-white text-xl font-bold cursor-pointer"
+                        >
+                            ✕
+                        </button>
+                        <h2 className="text-2xl font-semibold mb-4">{openProject.title}</h2>
+                        <p className="text-gray-300 mb-6">{openProject.description}</p>
+                        <div className="grid grid-cols-2 gap-4">
+                            <div className="bg-gray-800 h-32 rounded"></div>
+                            <div className="bg-gray-800 h-32 rounded"></div>
+                        </div>
+                    </div>
+                </div>
+            )}
         </>
     );
 }
