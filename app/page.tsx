@@ -26,7 +26,7 @@ export default function Home() {
                 <a href="#aboutme" className="hover:text-blue-400">O mně</a>
                 <a href="#skills" className="hover:text-blue-400">Dovednosti</a>
                 <a href="#projects" className="hover:text-blue-400">Projekty</a>
-                <a href="#other" className="hover:text-blue-400">Ostatní</a>
+                <a href="#courses" className="hover:text-blue-400">Absolvované kurzy</a>
             </nav>
 
             <main>
@@ -157,12 +157,12 @@ export default function Home() {
                         </div>
                     </section>
 
-                    {/* Ostatní */}
-                    <section id="other" className="min-h-screen scroll-mt-10 bg-gray-900 py-10 px-4">
+                    {/* Absolvované kurzy */}
+                    <section id="courses" className="min-h-[calc(100vh-2.5rem)] scroll-mt-10 bg-gray-900 py-10 px-4">
                         <div className="max-w-4xl mx-auto px-4">
-                            <h1 className="text-5xl font-bold mb-8 text-center text-white">Ostatní</h1>
+                            <h1 className="text-5xl font-bold mb-8 text-center text-white">Absolvované kurzy</h1>
                             <p className="max-w-xl text-lg text-gray-300">
-                                Kredit, úspěchy, ...
+                                Pozn.: Doplnit z wordu, shrnout
                             </p>
                         </div>
                     </section>
