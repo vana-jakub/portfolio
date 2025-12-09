@@ -5,6 +5,8 @@ import { SiPython, SiUnity, SiGit, SiPycharm, SiIntellijidea } from "react-icons
 import { DiJava } from "react-icons/di";
 import { VscVscode } from "react-icons/vsc";
 
+import Courses from "./courses";
+
 export default function Home() {
     const [openProject, setOpenProject] = useState<{ title: string; description: string } | null>(null);
     useEffect(() => {
@@ -24,28 +26,20 @@ export default function Home() {
             {/* Navigace */}
             <nav className="fixed top-0 left-0 right-0 bg-gray-700 text-white shadow z-50 p-4 flex justify-center space-x-6">
                 <a href="#aboutme" className="hover:text-blue-400">O mně</a>
-                <a href="#skills" className="hover:text-blue-400">Dovednosti</a>
                 <a href="#projects" className="hover:text-blue-400">Projekty</a>
                 <a href="#courses" className="hover:text-blue-400">Absolvované kurzy</a>
             </nav>
 
             <main>
                     {/* O mně */}
-                    <section id="aboutme" className="min-h-screen scroll-mt-10 bg-gray-950 py-24 px-4">
+                    <section id="aboutme" className="min-h-screen scroll-mt-10 bg-gray-900 py-20 px-4">
                         <div className="max-w-4xl mx-auto px-4">
                             <h1 className="text-5xl font-bold mb-8 text-center text-white">O mně</h1>
-                            <p className="max-w-xl text-lg text-gray-300">
-                                Ahoj, jmenuji se Jakub Váňa a jsem vývojář se zaměřením na Python a Java. Mám zkušenosti s vývojem webových aplikací a her, a rád se učím nové technologie.
-                            </p>
-                        </div>
-                    </section>
-
-                    {/* Dovednosti */}
-                    <section id="skills" className="min-h-screen scroll-mt-10 bg-gray-900 py-10 px-4">
-                        <div className="max-w-4xl mx-auto px-4">
-                            <h1 className="text-5xl font-bold mb-8 text-center text-white">Dovednosti</h1>
                             <p className="max-w-xl text-lg text-gray-300 mx-auto mb-12 text-center">
-                                Věnuji se vývoji skriptů a aplikací v Pythonu a Javě, a mám zkušenosti s herním vývojem v Unity pomocí C#. Mám také zkušenosti s verzovacím systémem Git a používám různé IDE jako Visual Studio Code, PyCharm a IntelliJ IDEA pro efektivní vývoj.
+                                Jmenuji se Jakub Váňa a jsem vývojář se zaměřením na Python a Java. Mám zkušenosti s vývojem webových aplikací a her, a rád se učím nové technologie.
+                            </p>
+                            <p className="max-w-xl text-lg text-gray-300 mb-8">
+                                Níže jsou uvedeny některé z mých klíčových dovedností a nástrojů, které běžně používám při vývoji projektů.
                             </p>
                             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                                 {[
@@ -136,10 +130,6 @@ export default function Home() {
                                         description: "Platforma pro monitorování a analýzu síťového provozu.",
                                     },
                                     {
-                                        title: "Shifter",
-                                        description: "Primitivní simulátor CLI příkazového řádku s výstižnými příkazy a funkcemi.",
-                                    },
-                                    {
                                         title: "Small scripts and tools...",
                                         description: "Různé menší skripty a nástroje pro různé úkoly.",
                                     }
@@ -158,14 +148,7 @@ export default function Home() {
                     </section>
 
                     {/* Absolvované kurzy */}
-                    <section id="courses" className="min-h-[calc(100vh-2.5rem)] scroll-mt-10 bg-gray-900 py-10 px-4">
-                        <div className="max-w-4xl mx-auto px-4">
-                            <h1 className="text-5xl font-bold mb-8 text-center text-white">Absolvované kurzy</h1>
-                            <p className="max-w-xl text-lg text-gray-300">
-                                Pozn.: Doplnit z wordu, shrnout
-                            </p>
-                        </div>
-                    </section>
+                    <Courses />
             </main>
 
             {/* Modal */}
