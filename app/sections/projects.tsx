@@ -4,10 +4,12 @@ import { useState, useEffect } from "react";
 
 const ProjectsSection = () => {
     const [openProject, setOpenProject] = useState<{
-        title: string; 
+        title: string;
         description: string;
         images: string[];
     } | null>(null);
+
+    const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
     useEffect(() => {
         if (openProject) {
@@ -21,29 +23,37 @@ const ProjectsSection = () => {
         {
             title: "Portfolio Website",
             description: "Moje osobní portfolio představující projekty a dovednosti.",
-            images: ["/test.png"],
+            images: ["/test.png", "/blue.png"],
         },
         {
             title: "Download Manager",
             description: "Nástroj pro efektivní správu a organizaci stahování.",
-            images: ["/test.png"],
+            images: ["/test.png", "/blue.png"],
         },
         {
             title: "FileShare",
             description: "Platforma pro sdílení souborů bezpečně a efektivně pomocí P2P.",
-            images: ["/test.png"],
+            images: ["/test.png", "/blue.png"],
         },
         {
             title: "NetStats",
             description: "Platforma pro monitorování a analýzu síťového provozu.",
-            images: ["/test.png"],
+            images: ["/test.png", "/blue.png"],
         },
         {
             title: "Small scripts and tools...",
             description: "Různé menší skripty a nástroje pro různé úkoly.",
-            images: ["/test.png"],
+            images: ["/test.png", "/blue.png"],
         },
     ];
+
+    const handleImageClick = (image: string) => {
+        setSelectedImage(image);
+    };
+
+    const handleModalClose = () => {
+        setSelectedImage(null);
+    };
 
     return (
         <section id="projects" className="min-h-screen scroll-mt-10 bg-gray-950 py-10 px-4 relative">
@@ -66,7 +76,7 @@ const ProjectsSection = () => {
                 </div>
             </div>
 
-            {/* Modal */}
+            {/* Project Modal */}
             {openProject && (
                 <div
                     className="fixed inset-0 bg-black/70 flex items-center justify-center z-50"
@@ -86,12 +96,40 @@ const ProjectsSection = () => {
                         <p className="text-gray-300 mb-6">{openProject.description}</p>
                         <div className="grid grid-cols-2 gap-4 mb-6">
                             {openProject.images.map((image, index) => (
-                                <div key={index} className="bg-gray-800 h-48 rounded overflow-hidden">
-                                    <img src={image} alt={`Project Image ${index + 1}`} className="w-full h-full object-cover" />
+                                <div
+                                    key={index}
+                                    className="bg-gray-800 h-48 rounded overflow-hidden cursor-pointer"
+                                    onClick={() => handleImageClick(image)}
+                                >
+                                    <img
+                                        src={image}
+                                        alt={`Project Image ${index + 1}`}
+                                        className="w-full h-full object-cover"
+                                    />
                                 </div>
                             ))}
                         </div>
                     </div>
+                </div>
+            )}
+
+            {/* Full-size Image Modal */}
+            {selectedImage && (
+                <div
+                    className="fixed inset-0 bg-black/70 flex items-center justify-center z-50"
+                    onClick={handleModalClose}
+                >
+                    <button
+                        onClick={handleModalClose}
+                        className="absolute top-4 right-4 text-gray-300 hover:text-white text-xl font-bold cursor-pointer"
+                    >
+                        ✕
+                    </button>
+                    <img
+                        src={selectedImage}
+                        alt="Full-size Project Image"
+                        className="max-w-full max-h-[80vh] object-contain"
+                    />
                 </div>
             )}
         </section>
