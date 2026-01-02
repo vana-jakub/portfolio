@@ -6,7 +6,9 @@ const ProjectsSection = () => {
     const [openProject, setOpenProject] = useState<{
         title: string;
         description: string;
+        detailedDescription: string;
         images: string[];
+        link: string;
     } | null>(null);
 
     const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -23,27 +25,42 @@ const ProjectsSection = () => {
         {
             title: "Portfolio Website",
             description: "Moje osobní portfolio představující projekty a dovednosti.",
+            detailedDescription:
+            "Toto portfolio webové stránky je vytvořeno pomocí Next.js (React) a Tailwind CSS, je naprogramováno TypeScriptem. Pro ikony v sekci O mně bylo použito react-icons.",
             images: ["/test.png", "/blue.png"],
+            link: "https://google.com",
         },
         {
             title: "Download Manager",
             description: "Nástroj pro efektivní správu a organizaci stahování.",
+            detailedDescription:
+            "Download Manager je aplikace naprogramovaná v Javě s použitím JavaFX navržená pro zjednodušení procesu stahování souborů z internetu. Umožňuje uživatelům udělat s notorického procesu stahování rychlý a efektivní zážitek díky unikátním funkcím.",
             images: ["/test.png", "/blue.png"],
+            link: "https://google.com",
         },
         {
             title: "FileShare",
             description: "Platforma pro sdílení souborů bezpečně a efektivně pomocí P2P.",
+            detailedDescription:
+            "FileShare je peer-to-peer (P2P) platforma, která umožňuje uživatelům sdílet soubory přímo mezi sebou bez potřeby centrálního serveru. Tato aplikace je vyvynuta v Javě, jedná se spíše o menší aplikaci, ovladatelnou přímo z příkazového řádku.",
             images: ["/test.png", "/blue.png"],
+            link: "https://google.com",
         },
         {
             title: "NetStats",
             description: "Platforma pro monitorování a analýzu síťového provozu.",
+            detailedDescription:
+            "NetStats je nástroj pro sledování a analýzu síťového provozu v reálném čase. Aplikace je vyvinuta v Pythonu, obsahuje funkce jako získání veřejné IP adresy, sledování rychlosti připojení, ping, traceroute a další užitečné nástroje pro diagnostiku sítě.",
             images: ["/test.png", "/blue.png"],
+            link: "https://google.com",
         },
         {
             title: "Small scripts and tools...",
             description: "Různé menší skripty a nástroje pro různé úkoly.",
+            detailedDescription:
+            "Tato kolekce menších skriptů a nástrojů je navržena pro usnadnění různých úkolů. Každý skript je vytvořen s důrazem na efektivitu a jednoduchost použití, což umožňuje uživatelům rychle dosáhnout požadovaných výsledků.",
             images: ["/test.png", "/blue.png"],
+            link: "https://google.com",
         },
     ];
 
@@ -93,7 +110,7 @@ const ProjectsSection = () => {
                             ✕
                         </button>
                         <h2 className="text-2xl font-semibold mb-4">{openProject.title}</h2>
-                        <p className="text-gray-300 mb-6">{openProject.description}</p>
+                        <p className="text-gray-300 mb-6">{openProject.detailedDescription}</p>
                         <div className="grid grid-cols-2 gap-4 mb-6">
                             {openProject.images.map((image, index) => (
                                 <div
@@ -109,6 +126,14 @@ const ProjectsSection = () => {
                                 </div>
                             ))}
                         </div>
+                        <a
+                            href={openProject.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="block w-full mt-4 text-center bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg"
+                        >
+                            Otevřít projekt na GitHub (zdrojový kód)
+                        </a>
                     </div>
                 </div>
             )}
