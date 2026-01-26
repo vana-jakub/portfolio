@@ -33,7 +33,7 @@ const CoursesSection = () => {
             <div className="max-w-4xl mx-auto px-4">
                 <h1 className="text-5xl font-bold mb-8 text-center text-white">Absolvované kurzy</h1>
                 <p className="max-w-xl text-lg text-gray-300 mb-8">
-                    Zde jsou některé z kurzů, které jsem absolvoval. Můžete si prohlédnout detaily, datum uskutečnění a přiložené soubory (např.: certifikát).
+                    Zde jsou některé z kurzů, které jsem absolvoval. Můžete si prohlédnout detaily, datum uskutečnění a přiložené soubory (např.: certifikát):
                 </p>
 
                 <div className="overflow-hidden rounded-lg shadow-xl">

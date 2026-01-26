@@ -77,14 +77,14 @@ const ProjectsSection = () => {
             <div className="max-w-4xl mx-auto px-4">
                 <h1 className="text-5xl font-bold mb-8 text-center text-white">Projekty</h1>
                 <p className="max-w-xl text-lg text-gray-300 mx-auto mb-12 text-center">
-                    Zde jsou některé z mých projektů, které jsem vytvořil, klikněte na box s projektem pro delší popis a dokumentaci projektu.
+                    Zde jsou některé z mých projektů, které jsem vytvořil, klikněte na box s projektem pro delší popis a dokumentaci projektu:
                 </p>
                 <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-2">
                     {projects.map((project, i) => (
                         <button
                             key={i}
                             onClick={() => setOpenProject(project)}
-                            className="block p-10 bg-gray-800 rounded-xl shadow-md hover:shadow-lg hover:bg-gray-700 transition"
+                            className="block p-10 bg-gray-800 rounded-xl shadow-md hover:shadow-lg hover:bg-gray-700 hover:-translate-y-1 transition cursor-pointer"
                         >
                             <h3 className="text-xl font-semibold mb-2 text-white">{project.title}</h3>
                             <p className="text-gray-400">{project.description}</p>
