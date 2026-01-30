@@ -16,19 +16,19 @@ export default function Home() {
             {/* Navigace */}
             <nav className="fixed top-0 left-0 right-0 bg-gray-700 text-white shadow z-50 p-4 flex justify-center space-x-6">
                 <a href="#aboutme" className="hover:text-blue-400">O mně</a>
-                <a href="#projects" className="hover:text-blue-400">Projekty</a>
                 <a href="#courses" className="hover:text-blue-400">Absolvované kurzy</a>
+                <a href="#projects" className="hover:text-blue-400">Projekty</a>
             </nav>
 
             <main>
                     {/* O mně */}
                     <AboutmeSection />
 
-                    {/* Projekty */}
-                    <ProjectsSection />
-
                     {/* Absolvované kurzy */}
                     <CoursesSection />
+
+                    {/* Projekty */}
+                    <ProjectsSection />
             </main>
         </>
     );

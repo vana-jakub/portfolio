@@ -1,37 +1,38 @@
-import { SiPython, SiUnity, SiGit, SiPycharm, SiIntellijidea } from "react-icons/si";
+import { SiPython, SiCyberdefenders, SiLinux } from "react-icons/si";
 import { DiJava } from "react-icons/di";
+import { FaNetworkWired, FaGlobeAmericas } from "react-icons/fa";
 
 const AboutmeSection = () => {
     const skills = [
         {
             name: "Programování - Python",
-            description: "Pokročilý - skripty, backend, datová analýza.",
+            description: "Programování v jazyce Python, vývoj aplikací a skriptů.",
             icon: <SiPython className="w-10 h-10 text-yellow-400" />,
         },
         {
             name: "Programování - Java",
-            description: "Pokročilý - vývoj aplikací, webové služby.",
+            description: "Programování v jazyce Java, vývoj aplikací a webových služeb.",
             icon: <DiJava className="w-10 h-10 text-red-500" />,
         },
         {
-            name: "Unity (C#)",
-            description: "Tvorba 2D/3D her, fyzika, UI, skriptování v C#.",
-            icon: <SiUnity className="w-10 h-10 text-gray-700" />,
+            name: "Kybernetická bezpečnost",
+            description: "Kybernetická bezpečnost, základy ochrany dat a sítí.",
+            icon: <SiCyberdefenders className="w-10 h-10 text-orange-500" />,
         },
         {
-            name: "Git",
-            description: "Běžné používání na všech projektech.",
-            icon: <SiGit className="w-10 h-10 text-orange-400" />,
+            name: "Linux",
+            description: "Práce s linuxovým operačním systémem, správa a konfigurace.",
+            icon: <SiLinux className="w-10 h-10 text-green-500" />,
         },
         {
-            name: "PyCharm",
-            description: "Efektivní práce s Pythonem - skriptování, debug, testování.",
-            icon: <SiPycharm className="w-10 h-10 text-green-400" />,
+            name: "Počítačové sítě",
+            description: "Základy počítačových sítí, správa a konfigurace.",
+            icon: <FaNetworkWired className="w-10 h-10 text-purple-500" />,
         },
         {
-            name: "IntelliJ IDEA",
-            description: "Vývoj v Javě - skvělé pro větší projekty.",
-            icon: <SiIntellijidea className="w-10 h-10 text-purple-600" />,
+            name: "Cestování a příroda",
+            description: "Rád cestuji a trávím čas v přírodě.",
+            icon: <FaGlobeAmericas className="w-10 h-10 text-blue-500" />,
         },
     ];
 
