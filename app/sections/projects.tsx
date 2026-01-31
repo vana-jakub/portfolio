@@ -26,41 +26,33 @@ const ProjectsSection = () => {
             title: "Portfolio Website",
             description: "Moje osobní portfolio představující projekty a dovednosti.",
             detailedDescription:
-            "Toto portfolio webové stránky je vytvořeno pomocí Next.js (React) a Tailwind CSS, je naprogramováno TypeScriptem. Pro ikony v sekci O mně bylo použito react-icons.",
-            images: ["/test.png", "/blue.png"],
-            link: "https://google.com",
+            "Toto portfolio webové stránky je vytvořeno pomocí Next.js (React) a Tailwind CSS, je naprogramováno TypeScriptem a postaveno a spravováno pomocí npm. Pro ikony v sekci O mně bylo použito react-icons.",
+            images: [],
+            link: "https://github.com/vana-jakub/portfolio",
         },
         {
             title: "Download Manager",
             description: "Nástroj pro efektivní správu a organizaci stahování.",
             detailedDescription:
             "Download Manager je aplikace naprogramovaná v Javě s použitím JavaFX navržená pro zjednodušení procesu stahování souborů z internetu. Umožňuje uživatelům udělat s notorického procesu stahování rychlý a efektivní zážitek díky unikátním funkcím.",
-            images: ["/test.png", "/blue.png"],
-            link: "https://google.com",
+            images: ["/downloadmanager/dm-1.png", "/downloadmanager/dm-2.png", "/downloadmanager/dm-3.png"],
+            link: "https://github.com/vana-jakub/DownloadManager",
         },
         {
             title: "FileShare",
             description: "Platforma pro sdílení souborů bezpečně a efektivně pomocí P2P.",
             detailedDescription:
             "FileShare je peer-to-peer (P2P) platforma, která umožňuje uživatelům sdílet soubory přímo mezi sebou bez potřeby centrálního serveru. Tato aplikace je vyvynuta v Javě, jedná se spíše o menší aplikaci, ovladatelnou přímo z příkazového řádku.",
-            images: ["/test.png", "/blue.png"],
-            link: "https://google.com",
+            images: ["/fileshare/fs-1.png", "/fileshare/fs-2.png", "/fileshare/fs-3.png"],
+            link: "https://github.com/vana-jakub/FileShare",
         },
         {
             title: "NetStats",
             description: "Platforma pro monitorování a analýzu síťového provozu.",
             detailedDescription:
             "NetStats je nástroj pro sledování a analýzu síťového provozu v reálném čase. Aplikace je vyvinuta v Pythonu, obsahuje funkce jako získání veřejné IP adresy, sledování rychlosti připojení, ping, traceroute a další užitečné nástroje pro diagnostiku sítě.",
-            images: ["/test.png", "/blue.png"],
-            link: "https://google.com",
-        },
-        {
-            title: "Small scripts and tools...",
-            description: "Různé menší skripty a nástroje pro různé úkoly.",
-            detailedDescription:
-            "Tato kolekce menších skriptů a nástrojů je navržena pro usnadnění různých úkolů. Každý skript je vytvořen s důrazem na efektivitu a jednoduchost použití, což umožňuje uživatelům rychle dosáhnout požadovaných výsledků.",
-            images: ["/test.png", "/blue.png"],
-            link: "https://google.com",
+            images: ["/netstats/ns-1.png", "/netstats/ns-2.png", "/netstats/ns-3.png", "/netstats/ns-4.png", "/netstats/ns-5.png"],
+            link: "https://github.com/vana-jakub/NetStats",
         },
     ];
 
