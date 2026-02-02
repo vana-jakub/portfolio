@@ -51,7 +51,7 @@ const ProjectsSection = () => {
             description: "Platforma pro monitorování a analýzu síťového provozu.",
             detailedDescription:
             "NetStats je nástroj pro sledování a analýzu síťového provozu v reálném čase. Aplikace je vyvinuta v Pythonu, obsahuje funkce jako získání veřejné IP adresy, sledování rychlosti připojení, ping, traceroute a další užitečné nástroje pro diagnostiku sítě.",
-            images: ["/netstats/ns-1.png", "/netstats/ns-2.png", "/netstats/ns-3.png", "/netstats/ns-4.png", "/netstats/ns-5.png"],
+            images: ["/netstats/ns-1.png", "/netstats/ns-2.png", "/netstats/ns-3.png", "/netstats/ns-4.png"],
             link: "https://github.com/vana-jakub/NetStats",
         },
     ];
