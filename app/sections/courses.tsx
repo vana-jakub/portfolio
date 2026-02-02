@@ -16,7 +16,7 @@ const CoursesSection = () => {
             name: "Reference",
             description: "Reference mých schopností a mé práce.",
             date: "7. - 9. ročník ZŠ",
-            file: "",
+            file: "/pdfs/Vana-Jakub-Reference.pdf",
             marked: true,
         },
         {
