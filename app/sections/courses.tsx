@@ -94,7 +94,7 @@ const CoursesSection = () => {
                     Zde jsou některé z kurzů, které jsem absolvoval. Můžete si prohlédnout detaily, datum uskutečnění a přiložené soubory (např.: certifikát):
                 </p>
 
-                <div className="overflow-hidden rounded-lg shadow-xl">
+                <div className="overflow-x-auto rounded-lg shadow-xl">
                     <table className="min-w-full table-auto bg-gray-800 text-white">
                         <thead>
                             <tr>

@@ -11,18 +11,18 @@ const AboutmeSection = () => {
         },
         {
             name: "Programování - Java",
-            description: "Programování v jazyce Java, vývoj aplikací a webových služeb.",
+            description: "Programování v jazyce Java, vývoj aplikací.",
             icon: <DiJava className="w-10 h-10 text-red-500" />,
         },
         {
             name: "Kybernetická bezpečnost",
             description: "Kybernetická bezpečnost, základy ochrany dat a sítí.",
-            icon: <SiCyberdefenders className="w-10 h-10 text-orange-500" />,
+            icon: <SiCyberdefenders className="w-10 h-10 text-blue-500" />,
         },
         {
             name: "Linux",
             description: "Práce s linuxovým operačním systémem, správa a konfigurace.",
-            icon: <SiLinux className="w-10 h-10 text-green-500" />,
+            icon: <SiLinux className="w-10 h-10 text-orange-500" />,
         },
         {
             name: "Počítačové sítě",
@@ -32,7 +32,7 @@ const AboutmeSection = () => {
         {
             name: "Cestování a příroda",
             description: "Rád cestuji a trávím čas v přírodě.",
-            icon: <FaGlobeAmericas className="w-10 h-10 text-blue-500" />,
+            icon: <FaGlobeAmericas className="w-10 h-10 text-green-500" />,
         },
     ];
 
