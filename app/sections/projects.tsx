@@ -26,7 +26,7 @@ const ProjectsSection = () => {
             title: "Portfolio Website",
             description: "Moje osobní portfolio představující projekty a dovednosti.",
             detailedDescription:
-            "Toto portfolio webové stránky je vytvořeno pomocí Next.js (React) a Tailwind CSS, je naprogramováno TypeScriptem a postaveno a spravováno pomocí npm. Pro ikony v sekci O mně bylo použito react-icons.",
+            "Toto portfolio je vytvořeno pomocí Next.js (React) a Tailwind CSS, je napsáno v TypeScriptu a buildováno a spravováno pomocí npm. Pro ikony v sekci O mně bylo použito react-icons.",
             images: [],
             link: "https://github.com/vana-jakub/portfolio",
         },
@@ -34,7 +34,7 @@ const ProjectsSection = () => {
             title: "Download Manager",
             description: "Nástroj pro efektivní správu a organizaci stahování.",
             detailedDescription:
-            "Download Manager je aplikace naprogramovaná v Javě s použitím JavaFX navržená pro zjednodušení procesu stahování souborů z internetu. Umožňuje uživatelům udělat s notorického procesu stahování rychlý a efektivní zážitek díky unikátním funkcím.",
+            "Download Manager je aplikace naprogramovaná v Javě s použitím JavaFX navržená pro zjednodušení procesu stahování souborů z internetu. Umožňuje uživatelům udělat z notorického procesu stahování rychlý a efektivní zážitek díky unikátním funkcím.",
             images: ["/downloadmanager/dm-1.png", "/downloadmanager/dm-2.png", "/downloadmanager/dm-3.png"],
             link: "https://github.com/vana-jakub/DownloadManager",
         },
@@ -42,7 +42,7 @@ const ProjectsSection = () => {
             title: "FileShare",
             description: "Platforma pro sdílení souborů bezpečně a efektivně pomocí P2P.",
             detailedDescription:
-            "FileShare je peer-to-peer (P2P) platforma, která umožňuje uživatelům sdílet soubory přímo mezi sebou bez potřeby centrálního serveru. Tato aplikace je vyvynuta v Javě, jedná se spíše o menší aplikaci, ovladatelnou přímo z příkazového řádku.",
+            "FileShare je peer-to-peer (P2P) platforma, která umožňuje uživatelům sdílet soubory přímo mezi sebou bez potřeby centrálního serveru. Tato aplikace je vyvinuta v Javě, jedná se spíše o menší aplikaci, ovladatelnou přímo z příkazového řádku.",
             images: ["/fileshare/fs-1.png", "/fileshare/fs-2.png", "/fileshare/fs-3.png"],
             link: "https://github.com/vana-jakub/FileShare",
         },
