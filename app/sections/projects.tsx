@@ -34,7 +34,7 @@ const ProjectsSection = () => {
             title: "Download Manager",
             description: "Nástroj pro efektivní správu a organizaci stahování.",
             detailedDescription:
-            "Download Manager je aplikace naprogramovaná v Javě s použitím JavaFX navržená pro zjednodušení procesu stahování souborů z internetu. Umožňuje uživatelům udělat z notorického procesu stahování rychlý a efektivní zážitek díky unikátním funkcím.",
+            "Download Manager je aplikace naprogramovaná v Javě s použitím JavaFX navržená pro zjednodušení procesu stahování souborů z internetu. Umožňuje uživatelům udělat z nudného procesu stahování rychlý a efektivní zážitek díky unikátním funkcím.",
             images: ["/downloadmanager/dm-1.png", "/downloadmanager/dm-2.png", "/downloadmanager/dm-3.png"],
             link: "https://github.com/vana-jakub/DownloadManager",
         },
@@ -92,7 +92,7 @@ const ProjectsSection = () => {
                     onClick={() => setOpenProject(null)}
                 >
                     <div
-                        className="bg-gray-900 text-white rounded-xl shadow-xl p-8 max-w-2xl w-full relative"
+                        className="bg-gray-900 text-white rounded-xl shadow-xl p-8 max-w-2xl w-full relative max-h-[90vh] overflow-y-auto"
                         onClick={(e) => e.stopPropagation()}
                     >
                         <button

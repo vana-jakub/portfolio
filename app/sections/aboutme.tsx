@@ -41,7 +41,7 @@ const AboutmeSection = () => {
             <div className="max-w-4xl mx-auto px-4">
                 <h1 className="text-5xl font-bold mb-8 text-center text-white">O mně</h1>
                 <p className="max-w-2xl text-lg text-gray-300 mx-auto mb-12 text-center">
-                    Jmenuji se Jakub Váňa a zajímám se o informační technologie. Aktivně se věnuji studiu programování, především v jazycích Python a Java, a postupně si rozšiřuji znalosti v oblasti kybernetické bezpečnosti. Mám základní zkušenosti s vývojem aplikací, prací v prostředí Linux a se základy počítačových sítí. Rád se učím nové technologie a neustále se snažím zlepšovat své dovednosti. Ve volném čase rád cestuji, trávím čas v přírodě, lyžuji a věnuji se rodině a přátelům.
+                    Jmenuji se Jakub Váňa a zajímám se o informační technologie. Aktivně se věnuji studiu programování, především v jazycích Python a Java, a postupně si rozšiřuji znalosti v oblasti kybernetické bezpečnosti. Mám základní zkušenosti s vývojem aplikací, prací v prostředí Linux a se základy počítačových sítí. Rád se učím nové technologie a neustále se snažím zlepšovat své dovednosti. Ve volném čase rád cestuji, lyžuji a trávím čas v přírodě s rodinou.
                 </p>
                 <p className="max-w-xl text-lg text-gray-300 mb-8">
                     Ve volném čase se věnuji následujícím aktivitám a činnostem:
